@@ -9,6 +9,11 @@ import { CreateInvoice } from '@/app/ui/invoices/buttons';
 import { lusitana } from '@/app/ui/fonts';
 
 import { Suspense } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Invoices',
+};
 
 export default async function Page(props: { searchParams?: Promise<{ query?: string; page?: string; }>; }) {
     const searchParams = await props.searchParams;
